@@ -46,7 +46,13 @@ export class UsersService {
 
       return {
         message: 'User created successfully',
-        data: storeUser,
+        data: {
+          id: storeUser.id,
+          email: storeUser.email,
+          password: storeUser.password,
+          createdAt: storeUser.createdAt,
+          updatedAt: storeUser.updatedAt,
+        },
       };
     } catch (error) {
       console.log('users.service.ts | register | error', error);
