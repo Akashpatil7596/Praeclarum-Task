@@ -43,7 +43,7 @@ export class ToDoService {
       });
 
       if (!toDo || !toDo.id) {
-        throw new HttpException('User already exists', HttpStatus.NOT_FOUND);
+        throw new HttpException('Todo does not exists', HttpStatus.NOT_FOUND);
       }
 
       return {
