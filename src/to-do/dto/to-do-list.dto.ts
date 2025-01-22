@@ -35,7 +35,7 @@ export class ToDoListDto {
   sortBy?: string;
 
   @ApiProperty({
-    example: 'ASC |  DESC',
+    example: 'ASC',
     required: false,
   })
   @IsOptional()
@@ -43,7 +43,7 @@ export class ToDoListDto {
   sortOrder?: string;
 
   @ApiProperty({
-    example: true,
+    example: false,
     required: false,
   })
   @IsOptional()

@@ -9,3 +9,4 @@ For Local Setup:
 For Production Setup:
 1. Project has been deployed on AWS EC2 instance
 2. Use the following link to access the application: http://65.2.63.196:8080/api-docs
+3. Choose staging environment in the swagger documentation
