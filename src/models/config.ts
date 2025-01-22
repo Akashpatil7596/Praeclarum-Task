@@ -2,9 +2,6 @@ import 'dotenv/config';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { join } from 'path';
 
-console.log('process.env.DB_PASSWORD', process.env.DB_PASSWORD);
-console.log('process.env.DB_HOST', process.env.DB_HOST);
-
 export const databaseConfig: TypeOrmModuleOptions = {
   type: 'postgres',
   host: process.env.DB_HOST as string,
