@@ -9,21 +9,24 @@ import {
 } from 'typeorm';
 import { User } from './users';
 
-@Entity({ name: 'to_do' })
-export class ToDo {
+@Entity({ name: 'products' })
+export class Products {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column('varchar', { length: 255 })
-  title: string;
+  name: string;
+
+  @Column('bigint', { nullable: false })
+  price: number;
 
   @Column('varchar', { length: 255 })
   description: string;
 
-  @Column('boolean', { default: false })
-  status: boolean;
+  @Column('bigint', { default: 1 })
+  quantity: number;
 
-  @ManyToOne(() => User, (user) => user.todo)
+  @ManyToOne(() => User, (user) => user.product)
   @JoinColumn({ name: 'user' })
   user: User;
 

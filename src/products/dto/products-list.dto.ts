@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
 
-export class ToDoListDto {
+export class ProductListDto {
   @ApiProperty({
     example: 10,
     required: true,
@@ -41,12 +41,4 @@ export class ToDoListDto {
   @IsOptional()
   @IsString()
   sortOrder?: string;
-
-  @ApiProperty({
-    example: false,
-    required: false,
-  })
-  @IsOptional()
-  @IsString()
-  status?: string;
 }

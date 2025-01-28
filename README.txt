@@ -5,6 +5,7 @@ For Local Setup:
 3. Run npm install
 4. Run npm run start:dev
 5. Open http://localhost:8080/api-docs in your browser for swagger documentation
+6. Choose local environment in the swagger documentation
 
 For Production Setup:
 1. Project has been deployed on AWS EC2 instance

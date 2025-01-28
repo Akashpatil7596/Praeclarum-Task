@@ -1,14 +1,23 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEmail, IsNotEmpty, MaxLength, MinLength } from 'class-validator';
+import { IsEmail, IsNotEmpty, IsNumber, IsString, MaxLength, MinLength } from 'class-validator';
 import { User } from 'src/models/users';
 
-export class CreateToDoDto {
+export class CreateProductDto {
   @ApiProperty({
-    example: 'This is a title',
+    example: 'Product Name',
     required: true,
   })
   @IsNotEmpty()
-  title: string;
+  @IsString()
+  name: string;
+
+  @ApiProperty({
+    example: 4000,
+    required: true,
+  })
+  @IsNumber()
+  @IsNotEmpty()
+  price: number;
 
   @ApiProperty({
     example:
@@ -16,9 +25,16 @@ export class CreateToDoDto {
     required: true,
   })
   @IsNotEmpty()
+  @IsString()
   description: string;
 
-  status?: boolean;
+  @ApiProperty({
+    example: 2,
+    required: true,
+  })
+  @IsNumber()
+  @IsNotEmpty()
+  quantity: number;
 
   user?: number | User;
 }

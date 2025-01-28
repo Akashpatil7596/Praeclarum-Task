@@ -48,6 +48,7 @@ export class UsersService {
         message: 'User created successfully',
         data: {
           id: storeUser.id,
+          name: storeUser.name,
           email: storeUser.email,
           password: storeUser.password,
           createdAt: storeUser.createdAt,
@@ -55,7 +56,7 @@ export class UsersService {
         },
       };
     } catch (error) {
-      console.log('users.service.ts | register | error', error);
+      console.log('users.service.ts | register | error | line:59', error);
       handleException(error);
     }
   }
@@ -93,7 +94,7 @@ export class UsersService {
         },
       };
     } catch (error) {
-      console.log('users.service.ts | login | error', error);
+      console.log('users.service.ts | login | error | line:97', error);
       handleException(error);
     }
   }
@@ -119,7 +120,7 @@ export class UsersService {
 
       return { message: 'User verified successfully' };
     } catch (error) {
-      console.log('users.service.ts | verifyUser | error', error);
+      console.log('users.service.ts | verifyUser | error | line:123', error);
       handleException(error);
     }
   }

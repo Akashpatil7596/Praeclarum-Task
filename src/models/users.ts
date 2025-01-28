@@ -8,12 +8,15 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { ToDo } from './to-do';
+import { Products } from './products';
 
 @Entity({ name: 'users' })
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
+
+  @Column('varchar', { length: 255 })
+  name: string;
 
   @Column('varchar', { unique: true, length: 255 })
   email: string;
@@ -32,8 +35,8 @@ export class User {
   @Column('boolean', { default: false })
   verified: boolean;
 
-  @OneToMany(() => ToDo, (todo) => todo.user)
-  todo: ToDo[];
+  @OneToMany(() => Products, (products) => products.user)
+  product: Products[];
 
   @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   createdAt: Date;

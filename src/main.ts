@@ -19,11 +19,11 @@ async function bootstrap() {
 
   const options = new DocumentBuilder()
     .setTitle('NestJS')
-    .setDescription('My To-Do Project With Postgres')
+    .setDescription('My IQud Tek Project With Postgres')
     .setVersion('1.0')
     .addServer('http://localhost:8080/', 'Local environment')
     .addServer('http://65.2.63.196:8080/', 'Staging')
-    .addTag('Your API Tag')
+    .addTag('IQud Tek APIs')
     .addBearerAuth()
     .build();
 

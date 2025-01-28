@@ -13,4 +13,7 @@ export const databaseConfig: TypeOrmModuleOptions = {
   autoLoadEntities: true,
   synchronize: true,
   logging: true,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 };
