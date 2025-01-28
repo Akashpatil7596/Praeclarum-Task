@@ -14,7 +14,7 @@ export class Products {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column('varchar', { length: 255 })
+  @Column('varchar', { length: 255, nullable: false })
   name: string;
 
   @Column('bigint', { nullable: false })
