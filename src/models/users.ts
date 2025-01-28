@@ -15,7 +15,7 @@ export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column('varchar', { length: 255 })
+  @Column('varchar', { length: 255, nullable: false })
   name: string;
 
   @Column('varchar', { unique: true, length: 255 })
